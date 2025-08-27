@@ -9,11 +9,14 @@ export default function Home() {
                     <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
                         <h2 className="text-4xl font-bold sm:text-5xl">
                             Download Now
-                            <span className="hidden sm:block text-4xl">Lorem Ipsum</span>
+                            <h4 className="hidden sm:block text-4xl">Your <span className='text-orange-700'>Logo</span></h4>
                         </h2>
 
                         <Link
                             className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
+                            onClick={() => {
+                                alert("Sorry, This feature is not available right now.")
+                            }}
                             to="/"
                         >
                             <svg
@@ -40,7 +43,7 @@ export default function Home() {
                 <img className="sm:w-96 w-48 rounded-3xl" src="https://plus.unsplash.com/premium_vector-1724595351165-0de7f6c9bc1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fG1lc3NhZ2luZyUyMHBlb3BsZSUyMGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D" alt="image2" />
             </div>
 
-            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
+            <h1 className="text-center text-2xl  py-10 font-medium">Make your stylist logo though generative ai </h1>
         </div>
     );
 }

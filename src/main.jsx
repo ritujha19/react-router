@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { Home, About, Contact, User, Github, } from "./components";
+import { Home, About, Contact, User, Github } from "./components";
 import { githubInfoLoader } from "./components/Github/github.jsx";
 import {
   createBrowserRouter,
@@ -38,9 +38,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/user/:userId" element={<User />} />
-      <Route 
-      loader={githubInfoLoader}
-      path="/github" element={<Github />} />
+      <Route loader={githubInfoLoader} path="/github" element={<Github />} />
     </Route>
   )
 );

@@ -1,9 +1,10 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable */
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useLoaderData } from 'react-router-dom'
 
 const github = () => {
+  const data = useLoaderData();
     // const [data, setData] = useState([]);
 
     // useEffect(()=>{
@@ -15,11 +16,14 @@ const github = () => {
     // })
 
   return (
-    <div className='w-170 text-center mx-auto my-25 text-3xl bg-gray-600 rounded-2xl text-white p-5'>
-      Github Followers: {data.followers}
-      
-        <img className='rounded-full' src={data.avatar_url} alt="Ritu Jha" width="200" height="200"/>
-        <p className='text-2xl'>Name: {data.name}</p>
+    <div className='w-150 h-60 text-center mx-auto my-15 text-3xl bg-gray-600 rounded-2xl text-white p-5 flex flex-row justify-evenly'>
+      <img className='rounded-full' src={data.avatar_url} alt="Ritu Jha" width="200" height="200"/>
+        <div>
+          <h1 className='mb-4'>Name: {data.name}</h1>
+          <h3 className='mb-4'>Github Followers: {data.followers}</h3>
+          <h3 className='mb-4'>Github Following: {data.following}</h3>
+          <h3 className='mb-4'>Public Repos: {data.public_repos}</h3>
+        </div>
     </div>
   )
 }
